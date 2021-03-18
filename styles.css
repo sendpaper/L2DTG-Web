@@ -1,1 +1,118 @@
+body {
+  font-family: arial;
+  background: #fffefc;
+}
 
+:root {
+  --green: #99b898;
+  --darkergreen: #769c75;
+  --yellow: #fecea8;
+  --orange: #ff847c;
+  --red: #e84a5f;
+  --black: #2a363b;
+}
+
+.webname {
+  background: var(--yellow);
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+.webname-link {
+  text-decoration: none;
+  color: white;
+}
+
+.webname-link:hover {
+  color: grey;
+}
+
+.search input[type=text] {
+  background: lavender;
+  border: none;
+  padding: 5px;
+}
+
+.search button {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+}
+
+.nav {
+  background: var(--green);
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+.nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 18px;
+  font-size: 15px;
+  text-decoration: none;
+}
+.nav-button:hover {
+  background: #81a680;
+}
+
+.sidenav {
+  float: right;
+}
+
+@media screen and (max-width:500px) {
+  .webname {
+  background: var(--yellow);
+  color: white;
+  padding: 15px;
+  font-size: 23px;
+  text-align: center;
+  box-sizing: border-box;
+  }
+  
+  .nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 7px 18px;
+  font-size: 13px;
+  text-decoration: none;
+  }
+}
+
+.featured {
+  background: url('https://images.veterinary-practice.com/vet%2Farticles%2Ftortoise.jpeg?scale.option=fill&scale.width=1200&scale.height=630&crop.width=1200&crop.height=630&crop.y=center&crop.x=center');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 200px;
+  margin: 10px 20px 0 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tile {
+  background: var(--red);
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+}
+
+footer {
+  background: var(--black);
+  color: white;
+  box-sizing: border-box;
+  bottom: 0;
+  padding: 25px 10px 15px 10px;
+}
