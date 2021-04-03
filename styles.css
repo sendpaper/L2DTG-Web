@@ -1,118 +1,281 @@
 body {
   font-family: arial;
-  background: #fffefc;
+  background: white;
 }
 
-:root {
-  --green: #99b898;
-  --darkergreen: #769c75;
-  --yellow: #fecea8;
-  --orange: #ff847c;
-  --red: #e84a5f;
-  --black: #2a363b;
-}
-
-.webname {
-  background: var(--yellow);
-  color: white;
-  padding: 20px;
-  font-size: 30px;
+/* header functions */
+.header {
+  overflow: hidden;
+  background: cyan;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.webname-link {
-  text-decoration: none;
-  color: white;
-}
-
-.webname-link:hover {
-  color: grey;
-}
-
-.search input[type=text] {
-  background: lavender;
-  border: none;
-  padding: 5px;
-}
-
-.search button {
-  cursor: pointer;
-  border: none;
-  padding: 5px;
+.logo {
+  font-family: f;
+  font-size: 30px;
+  padding: 15px 0 15px 25px;
 }
 
 .nav {
-  background: var(--green);
-  overflow: hidden;
-  position: sticky;
-  top: 0;
+  padding: 22px 0;
 }
+
 .nav a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 14px 18px;
-  font-size: 15px;
-  text-decoration: none;
-}
-.nav-button:hover {
-  background: #81a680;
+  padding: 0 10px;
 }
 
-.sidenav {
-  float: right;
-}
-
-@media screen and (max-width:500px) {
-  .webname {
-  background: var(--yellow);
-  color: white;
-  padding: 15px;
-  font-size: 23px;
-  text-align: center;
-  box-sizing: border-box;
-  }
-  
-  .nav a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 7px 18px;
-  font-size: 13px;
-  text-decoration: none;
-  }
-}
-
-.featured {
-  background: url('https://images.veterinary-practice.com/vet%2Farticles%2Ftortoise.jpeg?scale.option=fill&scale.width=1200&scale.height=630&crop.width=1200&crop.height=630&crop.y=center&crop.x=center');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  height: 200px;
-  margin: 10px 20px 0 20px;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.container {
+.header-right {
   display: flex;
-  padding: 5px;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.tile {
-  background: var(--red);
-  width: 200px;
-  height: 200px;
-  margin: 5px;
+.search {
+  padding: 22px 5px 22px 0;
 }
 
-footer {
-  background: var(--black);
+.account {
+  padding: 22px 25px 22px 5px;
+}
+
+/* new arrivals at top --> index.html */
+.arrivals {
+  background: violet;
+  height: 600px;
+  white-space: pre;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.arrivals-text {
+  padding-top: 300px;
+}
+
+.arrivals-text span {
   color: white;
+  background: black;
+}
+
+.arrivals-title {
+  font-size: 100px;
+}
+
+.arrivals-productsbutton {
+  font-size: 30px;
+}
+
+
+/* featured products --> index.html */
+.featured {
+  height: 750px;
+  width: 870px;
+  margin: auto;
+  text-align: center;
+}
+
+.featured-products {
+  display: flex;
+}
+
+.featured-title {
+  font-size: 30px;
+}
+
+.featured-big {
+  white-space: pre;
+  text-align: center;
+  margin: 30px 20px 0 0;
+}
+
+.imgplace1 {
+  background: red;
+  height: 450px;
+  width: 350px;
+}
+
+.featuredlarge-title {
+  font-size: 26px;
+}
+
+.featuredlarge-price {
+  font-size: 26px;
+}
+
+.featuredproducts-small {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featured-small {
+  margin: 0 5px 0 5px;
+  white-space: pre;
+}
+
+.imgplace2 {
+  background: red;
+  height: 200px;
+  width: 150px;
+}
+
+.featuredsmall-title {
+  text-align: center;
+}
+
+.featuredsmall-price {
+  text-align: center;
+}
+
+.featured-morebutton {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+
+/* sale sign --> index.html */
+.sale {
+  background: pink;
+  margin: auto;
+  height: 150px;
+  width: 90%;
+  text-align: right;
+  white-space: pre;
+}
+
+.sale-text {
+  font-size: 30px;
+}
+
+
+/* links to product pages --> index.html */
+.productlinks {
+  display: flex;
+  flex-wrap: wrap;
+  height: ;
+  width: 670px;
+  margin: auto;
+}
+
+.productlinks span {
+  color: white;
+  background: black;
+  font-size: 20px;
+}
+
+.productlink-womens {
+  background: blue;
+  margin: 5px 0 10px 5px;
+  height: 150px;
+  width: 300px;
+  text-align: right;
+}
+
+.productslink-womenstext {
+  
+}
+
+.productlink-mens {
+  background: blue;
+  margin: 5px;
+  height: 150px;
+  width: 300px;
+}
+
+.productslink-menstext {
+  
+}
+
+.productlink-outfits {
+  background: blue;
+  margin: 5px;
+  height: 310px;
+  width: 310px;
+  text-align: right;
+}
+
+.productslink-outfitstext {
+  
+}
+
+.productlink-shoes {
+  background: blue;
+  margin: 5px;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+.productslink-shoestext {
+  
+}
+
+.productlink-accessories {
+  background: blue;
+  margin: 5px;
+  height: 150px;
+  width: 300px;
+  text-align: center;
+}
+
+.productslink-accessoriestext {
+  
+}
+
+.productlink-bags {
+  background: blue;
+  margin: 5px;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+.productslink-bagstext {
+  
+}
+
+
+/* line of picutes --> index.html */
+.pictureline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pictureline-pictures {
+  height: 204px;
+  width: 204px;
+  margin: 1px;
+}
+
+
+/* footer */
+.footer {
+  overflow: hidden;
+  background: orange;
   box-sizing: border-box;
   bottom: 0;
-  padding: 25px 10px 15px 10px;
+}
+
+.footer-text {
+  display: flex;
+  padding: 50px;
+  margin: auto;
+}
+
+.aboutus {
+  padding-right: 30px;
+}
+
+.footernav {
+  
+}
+
+.footersearch {
+  padding: 0 0 30px 30px;
+}
+
+.contact {
+  padding-left: 30px;
 }
