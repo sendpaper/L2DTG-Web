@@ -1,30 +1,54 @@
 body {
-  font-family: arial;
+  font-family: "Karla", sans-sherif;
   background: white;
+  overflow-x: hidden;
+}
+
+:root {
+  --lightgrey: #edf5e1;
+  --lightgreen: #8ee4af;
+  --green: #5cdb95;
+  --greenblue: #379683;
+  --darkblue: #05386b;
+}
+
+/* remove underline on all links */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* header functions */
 .header {
   overflow: hidden;
-  background: cyan;
+  background: var(--greenblue);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+.header a {
+  color: white;
+}
+
 .logo {
-  font-family: f;
-  font-size: 30px;
-  padding: 15px 0 15px 25px;
+  font-size: 32px;
+  margin: 14px 0 14px 30px;
 }
 
 .nav {
-  padding: 22px 0;
+  margin: 22px 0;
 }
 
 .nav a {
-  padding: 0 10px;
+  margin: 0 10px;
+  font-size: 17px;
+}
+
+.navbutton,
+.navbutton-products {
+  display: none;
 }
 
 .header-right {
@@ -33,24 +57,139 @@ body {
 }
 
 .search {
-  padding: 22px 5px 22px 0;
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0;
+}
+
+.search input[type=text] {
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+}
+
+.search button {
+  float: right;
+  padding: 7px 10px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background: #ccc;
 }
 
 .account {
-  padding: 22px 25px 22px 5px;
+  margin: 20px 30px 20px 5px;
+  height: 30px;
 }
 
-/* new arrivals at top --> index.html */
+@media screen and (max-width: 600px) {
+  .header {
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 30px;
+    padding: 15px 0;
+  }
+  
+  .nav {
+    display: none;
+  }
+  
+  .navbutton:hover .navbutton-content {
+    display:block;
+    position:absolute;
+  }
+  .navbutton-dropped{
+    height: 50px;
+  }
+  .navbutton-dropped:hover {
+    background-color: white;
+  }
+  
+  .navbtn {
+    border: none;
+    cursor: pointer;
+    width: 30px;
+  }
+  
+  .navbutton {
+    position: relative;
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 16px;
+  }
+  
+  .navbutton-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    height: 100px;
+  }
+  
+  .navbutton-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .navbutton:hover .dropdown-content {
+    display: block;
+  }
+  
+  .header-right {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .search input[type=text] {
+    display: none;
+  }
+  
+  .search button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search button:hover {
+    background: #ccc;
+  }
+  
+  .account {
+    display: none;
+  }
+}
+
+/* new arrivals */
 .arrivals {
-  background: violet;
-  height: 600px;
+  background: url('https://p.favim.com/orig/2018/09/15/funny-aesthetic-cats-Favim.com-6283710.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 550px;
   white-space: pre;
   text-align: center;
   margin-bottom: 50px;
 }
 
 .arrivals-text {
-  padding-top: 300px;
+  padding-top: 250px;
 }
 
 .arrivals-text span {
@@ -66,17 +205,28 @@ body {
   font-size: 30px;
 }
 
+@media screen and (max-width: 800px) {
+  .arrivals-title {
+    font-size: 60px;
+  }
+  
+  .arrivals-productsbutton {
+    font-size: 20px;
+  }
+  
+}
 
-/* featured products --> index.html */
+
+/* featured products */
 .featured {
-  height: 750px;
-  width: 870px;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
 
 .featured-products {
   display: flex;
+  justify-content: center;
 }
 
 .featured-title {
@@ -84,15 +234,14 @@ body {
 }
 
 .featured-big {
-  white-space: pre;
-  text-align: center;
+  white-space: pre-line;
   margin: 30px 20px 0 0;
 }
 
 .imgplace1 {
-  background: red;
-  height: 450px;
-  width: 350px;
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
 }
 
 .featuredlarge-title {
@@ -107,38 +256,67 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 480px;
 }
 
 .featured-small {
-  margin: 0 5px 0 5px;
-  white-space: pre;
+  margin: 0 5px;
+  white-space: pre-line;
 }
 
 .imgplace2 {
-  background: red;
   height: 200px;
   width: 150px;
-}
-
-.featuredsmall-title {
-  text-align: center;
-}
-
-.featuredsmall-price {
-  text-align: center;
+  object-fit: cover;
 }
 
 .featured-morebutton {
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 25px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 900px) {
+  .featured {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .featured-products {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .featured-big {
+    white-space: pre-line;
+    margin: 0 auto 40px auto;
+  }
+  
+  .featuredlarge-title,
+  .featuredlarge-price {
+    font-size: 26px;
+  }
+  
+  .featuredproducts-small {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .featured-small {
+    margin: 0 5px 20px 5px;
+    white-space: pre-line;
+  }
+  
 }
 
 
-/* sale sign --> index.html */
+/* sale sign */
 .sale {
   background: pink;
-  margin: auto;
-  height: 150px;
+  margin: 100px auto;
+  height: 30%;
   width: 90%;
   text-align: right;
   white-space: pre;
@@ -146,136 +324,414 @@ body {
 
 .sale-text {
   font-size: 30px;
+  padding: 0 50px 0 0;
 }
 
 
-/* links to product pages --> index.html */
+/* links to product pages */
 .productlinks {
   display: flex;
   flex-wrap: wrap;
-  height: ;
-  width: 670px;
+  width: 800px;
   margin: auto;
 }
 
 .productlinks span {
   color: white;
   background: black;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .productlink-womens {
   background: blue;
   margin: 5px 0 10px 5px;
-  height: 150px;
-  width: 300px;
+  height: 180px;
+  width: 380px;
   text-align: right;
-}
-
-.productslink-womenstext {
-  
 }
 
 .productlink-mens {
   background: blue;
   margin: 5px;
-  height: 150px;
-  width: 300px;
-}
-
-.productslink-menstext {
-  
+  height: 180px;
+  width: 380px;
 }
 
 .productlink-outfits {
   background: blue;
   margin: 5px;
-  height: 310px;
-  width: 310px;
+  height: 370px;
+  width: 370px;
   text-align: right;
-}
-
-.productslink-outfitstext {
-  
 }
 
 .productlink-shoes {
   background: blue;
   margin: 5px;
-  height: 150px;
-  width: 150px;
+  height: 180px;
+  width: 180px;
   text-align: center;
-}
-
-.productslink-shoestext {
-  
 }
 
 .productlink-accessories {
   background: blue;
   margin: 5px;
-  height: 150px;
-  width: 300px;
+  height: 180px;
+  width: 380px;
   text-align: center;
-}
-
-.productslink-accessoriestext {
-  
 }
 
 .productlink-bags {
   background: blue;
   margin: 5px;
-  height: 150px;
-  width: 150px;
+  height: 180px;
+  width: 180px;
   text-align: center;
 }
 
-.productslink-bagstext {
+@media screen and (max-width: 500px) {
+  .productlinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
   
+  .productlink-small {
+    text-align: right;
+    background: blue;
+    margin: 5px auto;
+    padding: 120px 30px 0 0;
+    height: 60px;
+    width: 350px;
+  }
+  
+  .productlink-womens {
+      margin-bottom: 10px;
+  }
 }
 
 
-/* line of picutes --> index.html */
+/* line of picutes */
 .pictureline {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 40px 0 5px 0;
 }
 
 .pictureline-pictures {
   height: 204px;
   width: 204px;
-  margin: 1px;
+  margin: 5px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1327px) {
+  #pictureline-1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1118px) {
+  #pictureline-1 {display: none;}
+  #pictureline-2 {display: none;}
+}
+
+@media screen and (max-width: 909px) {
+  #pictureline-1 {display: none;}
+  #pictureline-2 {display: none;}
+  #pictureline-3 {display: none;}
+}
+
+@media screen and (max-width: 700px) {
+  .pictureline {display: none;}
 }
 
 
 /* footer */
 .footer {
-  overflow: hidden;
-  background: orange;
+  background: var(--darkblue);
   box-sizing: border-box;
   bottom: 0;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer hr {
+  width: 75px;
+  border: 1px solid var(--lightgrey);
+  margin: 15px 0;
 }
 
 .footer-text {
   display: flex;
-  padding: 50px;
   margin: auto;
+  color: white;
+}
+
+.footer-text text {
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .aboutus {
-  padding-right: 30px;
+  margin-right: 30px;
+  height: 50px;
+  width: 300px;
+  margin: 20px;
 }
 
 .footernav {
-  
+  height: 50px;
+  width: 100px;
+  margin: 20px;
 }
 
-.footersearch {
-  padding: 0 0 30px 30px;
+.footernav a {
+  color: white;
 }
 
 .contact {
-  padding-left: 30px;
+  margin-left: 30px;
+  height: 25px;
+  width: 300px;
+  margin: 20px;
 }
+
+@media screen and (max-width: 700px) {
+  .footer {
+    background: var(--darkblue);
+    box-sizing: border-box;
+    bottom: 0;
+    margin-top: 35px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .footer-text {
+    display: flex;
+    padding: 50px;
+    margin: auto;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .aboutus {
+    margin-right: 30px;
+    height: 50px;
+    width: 100px;
+    margin: 20px;
+  }
+  
+  .footernav {
+    height: 50px;
+    width: 100px;
+    margin: 20px;
+  }
+  
+  .footernav a {
+    color: white;
+  }
+  
+  .contact {
+    margin-left: 30px;
+    height: 25px;
+    width: 300px;
+    margin: 20px;
+  }
+}
+
+
+/* top of product pages */
+.pagetitle {
+  background: url('https://p.favim.com/orig/2018/09/15/funny-aesthetic-cats-Favim.com-6283710.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+  white-space: pre;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pagetitle-text {
+  padding-top: 300px;
+}
+
+.pagetitle-text span {
+  color: white;
+  background: black;
+}
+
+.pagetitle-title {
+  font-size: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  .pagetitle-title {
+    font-size: 60px;
+  }
+  
+}
+
+/* products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.products-item {
+  margin: 0 20px 20px 20px;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.imgplace3 {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.productsitem-title,
+.productsitem-price {
+  
+}
+
+
+/* product page */
+
+.productpage {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin: 50px auto 0 auto;
+}
+
+.productpage img {
+  height: 500px;
+  width: 400px;
+  margin: 20px;
+  object-fit: cover;
+}
+
+.productpage-headers {
+  white-space: pre;
+  margin-left: 15px;
+}
+
+.productpage-title {
+  font-size: 50px;
+}
+
+.productpage-price {
+  font-size: 30px;
+}
+
+.productpage-toptext {
+  display: none;
+}
+
+.productpage-description {
+  width: 400px;
+  overflow-wrap: break-word;
+  margin-left: 15px;
+}
+
+.addcart-button {
+  border: none;
+  background-color: var(--green);
+  padding: 14px 38px;
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+}
+
+.addcart-button:hover {
+  background: var(--lightgreen);
+}
+
+@media screen and (max-width: 900px) {
+  .productpage {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 50px auto 0 auto;
+  }
+  
+  .productpage img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    order: 2;
+  }
+  
+  .productpage-headers {
+    display: none;
+  }
+  
+  .productpage-toptext {
+    display: inline;
+    order: 1;
+    white-space: pre;
+  }
+  
+  .productpage-toptitle {
+    font-size: 50px;
+  }
+  
+  .productpage-topprice {
+    font-size: 30px;
+  }
+  
+  .productpage-text {
+    order: 3;
+  }
+}
+
+/* products page other products */
+
+.otherproducts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.imgplace4 {
+  height: 190px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.otherproducts-item {
+  margin: 0 20px 20px 20px;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.otherproductsitem-title 
+.otherproductsitem-price {
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
