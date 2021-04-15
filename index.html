@@ -1,154 +1,202 @@
-<html>
+ <html>
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   
   <body>
     <div class="header">
-      <div class="logo">
-        Logo
+      <!-- small navagation button for phones -->
+      <div class="navbutton">
+        <img class="navbtn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAADPz89LS0uWlpb39/eCgoKQkJCxsbH29vZiYmI4ODh0dHTX19empqbFxcXr6+sQEBDh4eEbGxu7u7s0NDR6enpXV1egoKDJyclvb28ODg6IiIhcXFwfHx8ZGRnwNjATAAACZUlEQVR4nO3dCW7CMBCFYRdIw75vbSm9/y2rqKgUVRo72NJoxv93gveUkGBj7BAAAAAAAAAAAAAAAAAAoAKrdjq0Y9qu+tVbH1/sOa7TC7baYZ/UJvZrZtpJnzZrkgputHNm2KRUPGinzHKIF3zVzpjpNVZwq50w2zbScKodMNtULjjRzlfARGw41o5XwFhsONeOV8BcbGj3ZX83Extqpyui8oY77XQFXMWGJ+14BZzEhlbHTX/JY6iBdrwCFmJDD48auWBYaufLtow0NP803cUKhoV2xEyRT6H9+zR6j3bO2ikznFMKhrDSzvm05GnhxuYgap40l3izHlmbcpuNekx53y7kdmDHts/lAwAAAAAAAAAAxjRvy5Edy7e+P1zsh9q/JfU23PfoN7hqx33KdZBa0O5i9ugy9h+f2jkzfKYUfNdOmeU9XtD6Sm95lXfwsFhfXqofwkU7YLZLpKF2vgLkgnYXC93Jy4bsvgrv5JeivS9r/w3Fhh/a8QrYiA210xVR+TX0/zn0/yz1/z708KiRC1bwvdT+2CI6JeV+fFjBGL+CeRrLT5vEubYK5kuD/znvjvffLQAAAAAAAAAAgCHO94myt9fXoddeXxOj+7XFFkD/srtsKHHPPff7Jrrf+9L//qVf2hEzRfegtX2PdmL3qXa+AuSC/vfz9r8nu/999a3v5t2Rn6ba6YqovKH/c2ZsDpseyWcFWV/l3ZFXettfqh/9I7D7c9cqODvP/H+7EhazW5tke5RwhmVoLI+Bk84h9X+WbLA7hko9DzhUcKZzx/m53AAAAAAAAAAAAAAAAABg0zfn21Nf0tdOJAAAAABJRU5ErkJggg==">
+        <div class="navbutton-content">
+          <a href="products.html" class="navbutton-dropped">PRODUCTS</a>
+          <a href="products.html" class="navbutton-dropped">PRODUCTS</a>
+          <a href="products.html" class="navbutton-dropped">PRODUCTS</a>
+          <a href="products.html" class="navbutton-dropped">PRODUCTS</a>
+          <a href="products.html" class="navbutton-dropped">PRODUCTS</a>
+          <a href="products.html" class="navbutton-dropped">PRODUCTS</a>
+        </div>
       </div>
       
+      <!-- website name or logo -->
+      <div class="logo">
+        <a href="index.html">Website Name</a>
+      </div>
+      
+      <!-- normal navagation bar -->
       <div class="nav">
-        <a>Womens</a>
-        <a>Mens</a>
-        <a>Outfits</a>
-        <a>Shoes</a>
-        <a>Accessories</a>
-        <a>Bags</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="products.html">PRODUCTS</a>
       </div>
        
       <div class="header-right">
+        <!-- search bar -->
         <div class="search">
-            Search
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
         </div>
         
-        <div class="account">
-          Account
-        </div>
+        <!-- account button -->
+        <img class="account" src="https://cdn.iconscout.com/icon/free/png-512/person-1767893-1502146.png">
       </div>
     </div>
     
     <div class="arrivals">
+      <!-- arrivals title -->
       <div class="arrivals-text">
-        <text class="arrivals-title"><span> New Arrivals </span></text>
-        <a class="arrivals-productsbutton"><span> Go to Products </span></a>
+        <text class="arrivals-title"><span> PRODUCT </span></text>
+        <a class="arrivals-productsbutton"><span> GO TO PRODUCTS </span></a>
       </div>
     </div>
     
     <div class="featured">
       <text class="featured-title">Featured Products</text>
       
+      <!-- large first featured product -->
       <div class="featured-products">
-        <div class="featured-big">
-          <div class="imgplace1"></div>
+        <a class="featured-big" href="productpage.html">
+          <img class="imgplace1" src="https://data.whicdn.com/images/309460818/original.jpg">
           <text class="featuredlarge-title">Title</text>
           <text class="featuredlarge-price">Price</text>
-        </div>
+        </a>
         
+        <!-- all other featured products -->
         <div class="featuredproducts-small">
-          <div class="featured-small">
-            <div class="imgplace2"></div>
+          <a class="featured-small" href="productpage.html">
+            <img class="imgplace2" src="https://pbs.twimg.com/media/ETmsZTVU8AMQDDK.jpg">
             <text class="featuredsmall-title">Title</text>
             <text class="featuredsmall-price">Price</text>
-          </div>
+          </a>
           
-          <div class="featured-small">
-            <div class="imgplace2"></div>
+          <!-- duplicated code from above -->
+          <a class="featured-small" href="productpage.html">
+            <img class="imgplace2" src="https://i.pinimg.com/564x/e8/2e/39/e82e39bfb51b62cf624aac4d347fbce1.jpg">
             <text class="featuredsmall-title">Title</text>
             <text class="featuredsmall-price">Price</text>
-          </div>
+          </a>
           
-          <div class="featured-small">
-            <div class="imgplace2"></div>
+          <a class="featured-small" href="productpage.html">
+            <img class="imgplace2" src="https://i.pinimg.com/236x/57/89/93/578993e65f11268042b08b0e7f00f394--cats-humor-funny-cats.jpg">
             <text class="featuredsmall-title">Title</text>
             <text class="featuredsmall-price">Price</text>
-          </div>
+          </a>
           
-          <div class="featured-small">
-            <div class="imgplace2"></div>
+          <a class="featured-small" href="productpage.html">
+            <img class="imgplace2" src="https://i.pinimg.com/474x/4e/69/8f/4e698f17421fb69716acde4f0a9bc3e0.jpg">
             <text class="featuredsmall-title">Title</text>
             <text class="featuredsmall-price">Price</text>
-          </div>
+          </a>
           
-          <div class="featured-small">
-            <div class="imgplace2"></div>
+          <a class="featured-small" href="productpage.html">
+            <img class="imgplace2" src="https://i.pinimg.com/236x/f9/1d/04/f91d04322296810af32f86769a4516cc.jpg">
             <text class="featuredsmall-title">Title</text>
             <text class="featuredsmall-price">Price</text>
-          </div>
+          </a>
           
-          <div class="featured-small">
-            <div class="imgplace2"></div>
+          <a class="featured-small" href="productpage.html">
+            <img class="imgplace2" src="https://i.pinimg.com/474x/a6/9c/e0/a69ce0095e347ddd60687a3bf10e5770.jpg">
             <text class="featuredsmall-title">Title</text>
             <text class="featuredsmall-price">Price</text>
-          </div>
+          </a>
         </div>
       </div>
       
-      <a class="featured-morebutton">See more</a>
+      <a class="featured-morebutton" href="products.html">SEE MORE</a>
       
     </div>
     
     <div class="sale">
+      <!-- sale advertisment banner -->
       <text class="sale-text"><span>Sale</span></text>
     </div>
     
     <div class="productlinks">
       <div>
-        <div class="productlink-womens">
-          <text class="productslink-womenstext"><span>Womens</span></text>
-        </div>
+        <a href="products.html">
+          <div class="productlink-womens productlink-small">
+            <text><span> PRODUCT </span></text>
+          </div>
+        </a>
         
-        <div class="productlink-mens">
-          <text class="productslink-menstext"><span>Mens</span></text>
+        <a href="products.html">
+          <div class="productlink-mens productlink-small">
+            <text><span> PRODUCT </span></text>
+          </div>
+        </a>
+      </div>
+      
+      <a href="products.html">
+        <div class="productlink-outfits productlink-small">
+          <text><span> PRODUCT </span></text>
         </div>
-      </div>
+      </a>
       
-      <div class="productlink-outfits">
-        <text class="productslink-outfitstext"><span>Outfits</span></text>
-      </div>
+      <a href="products.html">
+        <div class="productlink-shoes productlink-small">
+          <text><span> PRODUCT </span></text>
+        </div>
+      </a>
       
-      <div class="productlink-shoes">
-        <text class="productslink-shoestext"><span>Shoes</span></text>
-      </div>
+      <a href="products.html">
+        <div class="productlink-accessories productlink-small">
+          <text><span> PRODUCT </span></text>
+        </div>
+      </a>
       
-      <div class="productlink-accessories">
-        <text class="productslink-accessoriestext"><span>Accessories</span></text>
-      </div>
-      
-      <div class="productlink-bags">
-        <text class="productslink-bagstext"><span>Bags</span></text>
-      </div>
+      <a href="products.html">
+        <div class="productlink-bags productlink-small">
+          <text><span> PRODUCT </span></text>
+        </div>
+      </a>
     </div>
     
     <div class="pictureline">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg?crop=0.922xw:0.738xh;0.0555xw,0.142xh&resize=640:*" class="pictureline-pictures">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg?crop=0.922xw:0.738xh;0.0555xw,0.142xh&resize=640:*" class="pictureline-pictures">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg?crop=0.922xw:0.738xh;0.0555xw,0.142xh&resize=640:*" class="pictureline-pictures">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg?crop=0.922xw:0.738xh;0.0555xw,0.142xh&resize=640:*" class="pictureline-pictures">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg?crop=0.922xw:0.738xh;0.0555xw,0.142xh&resize=640:*" class="pictureline-pictures">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg?crop=0.922xw:0.738xh;0.0555xw,0.142xh&resize=640:*" class="pictureline-pictures">
+      <!-- line of pictures at bottom of the page -->
+      <img id="pictureline-1" src="https://i.pinimg.com/originals/67/f6/eb/67f6ebcb906ca984f22ac7b77576917d.jpg" class="pictureline-pictures">
+      <img id="pictureline-2" src="https://i.pinimg.com/originals/e7/c6/3c/e7c63c7c6f43716f58b0a495362c9103.jpg" class="pictureline-pictures">
+      <img id="pictureline-3" src="https://i.pinimg.com/736x/12/8a/0f/128a0f83db65cb93230525bbeb130e4a.jpg" class="pictureline-pictures">
+      <img src="https://pbs.twimg.com/media/EVA0hR6XYAQSTS2.jpg" class="pictureline-pictures">
+      <img src="https://pbs.twimg.com/profile_images/1048766615297380353/HKJd2upR_400x400.jpg" class="pictureline-pictures">
+      <img src="https://pbs.twimg.com/profile_images/814810348012314625/uvfe2LiS_400x400.jpg" class="pictureline-pictures">
     </div>
     
     <div class="footer">
       <div class="footer-text">
+        <!-- about the company -->
         <div class="aboutus">
-          <text>About Us</text>
-          <p>Text</p>
+          <text>ABOUT US</text>
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse metus ante, molestie sit amet magna at, tristique vestibulum dolor. Donec tincidunt ullamcorper iaculis. Quisque congue felis a ligula faucibus molestie.</p>
         </div>
         
         <div class="footernav">
-          <text>Links</text>
-          <p>Text</p>
-        </div>
-        
-        <div class="footersearch">
-          
+          <!-- simple navagation -->
+          <text>NAVAGATION</text>
+          <hr>
+          <a href="products.html">PRODUCT</a>
+          <a href="products.html">PRODUCT</a>
+          <a href="products.html">PRODUCT</a>
+          <a href="products.html">PRODUCT</a>
+          <a href="products.html">PRODUCT</a>
+          <a href="products.html">PRODUCT</a>
         </div>
         
         <div class="contact">
-          <text>Contact Information</text>
-          <p>Text</p>
+          <!-- contact information -->
+          <text>CONTACT US</text>
+          <hr>
+          <p>Phone: 012 345 6789</p>
+          <p>Email: placeholderemail@gmail.com</p>
         </div>
       </div>
     </div>
